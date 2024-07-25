@@ -1,0 +1,43 @@
+---
+import Popular from "./Popular.astro";
+---
+
+<section class="m-8">
+  <h1 class="uppercase font-bold text-4xl text-center text-white m-8">
+    <span class="text-4xl">★</span>
+    Nuestros platos más populares
+    <span class="text-4xl">★</span>
+  </h1>
+  <main class="flex flex-row justify-around">
+    <Popular
+      dishImg="pollo-a-la-brasa"
+      dishTitle="Pollo a la Brasa"
+      dishImgDescription="Imagen referencial de un pollo a la brasa."
+      dishPrice="19.99"
+    />
+
+    <Popular
+      dishImg="trio-marino"
+      dishTitle="Trío Marino"
+      dishImgDescription="Imagen referencial de un trío marino."
+      dishPrice="24.99"
+    />
+
+    <Popular
+      dishImg="leche-de-tigre"
+      dishTitle="Leche de Tigre"
+      dishImgDescription="Imagen referencial de una Leche de Tigre."
+      dishPrice="14.99"
+    />
+  </main>
+</section>
+
+<script>
+  const PLATOS = document.querySelectorAll(".popular");
+
+  PLATOS.forEach((plato) => {
+    plato.addEventListener("click", () => {
+      alert("hola");
+    });
+  });
+</script>
