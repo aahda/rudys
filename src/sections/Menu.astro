@@ -3,7 +3,7 @@ import MenuSection from "../components/MenuSection.astro";
 import SectionTitle from "../components/SectionTitle.astro";
 ---
 
-<section class="pageSection activo my-8">
+<section class="pageSection hidden my-8">
   <SectionTitle titleText="Menú" />
 
   <article class="flex flex-row my-8">
@@ -53,7 +53,8 @@ import SectionTitle from "../components/SectionTitle.astro";
 
   pdfButton.addEventListener("click", () => {
     pdfArticle.classList.toggle("hidden");
-    let isClose = pdfArticle.classList.contains("hidden");
+
+    const isClose = pdfArticle.classList.contains("hidden");
 
     isClose
       ? (pdfButton.innerHTML = "VER EL MENÚ COMPLETO (.PDF)")

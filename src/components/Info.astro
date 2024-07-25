@@ -11,7 +11,7 @@ const { title, text, img, imgDescription, direction } = Astro.props;
 ---
 
 <article class=`flex ${direction} px-8 gap-16 justify-center items-center m-16`>
-  <div class="">
+  <div>
     <h3 class="text-white text-2xl w-[500px] font-bold text-center mb-4">
       {title}
     </h3>
@@ -19,7 +19,7 @@ const { title, text, img, imgDescription, direction } = Astro.props;
   </div>
   <img
     class="w-[400px]"
-    src=`/nosotros-images/${img}.jpg`
+    src=`/nosotros-images/${img}.webp`
     alt={imgDescription}
   />
 </article>

@@ -15,13 +15,13 @@ const { userName, perfil, comment, rating } = Astro.props;
   <header class="flex flex-row items-center gap-4">
     <img
       class="w-14 h-14 rounded-[50%]"
-      src=`/perfiles/${perfil}.jpg`
+      src=`/perfiles/${perfil}.webp`
       alt="Imagen del usuario"
     />
     <h3>{userName}</h3>
   </header>
   <aside class="absolute right-5 top-5">
-    <img src="/icons/comillas.png" alt="Imagen de comillas en el comentario" />
+    <img src="/icons/comillas.webp" alt="Imagen de comillas en el comentario" />
   </aside>
   <main class="my-4">
     <p>{comment}</p>

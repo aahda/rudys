@@ -1,11 +1,11 @@
 ---
-import ComentarioCard from "../components/ComentarioCard.astro";
+import CommentCard from "../components/CommentCard.astro";
 import Info from "../components/Info.astro";
 import Mapa from "../components/Mapa.astro";
 import SectionTitle from "../components/SectionTitle.astro";
 ---
 
-<section class="pageSection hidden">
+<section class="pageSection hidden my-8">
   <SectionTitle titleText="Nosotros" />
 
   <Info
@@ -37,7 +37,8 @@ import SectionTitle from "../components/SectionTitle.astro";
   <SectionTitle titleText="Nuestra galería" />
 
   <SectionTitle titleText="Comentarios" />
-  <ComentarioCard
+  <!-- Crear componente "Comments" y hacer el funcionamiento del slider ahí -->
+  <CommentCard
     userName="Angelo Torres"
     perfil="angelo-torres"
     comment="Este lugar es genial. El pollo a la brasa es jugoso y lleno de sabor, y el ceviche está fresco y delicioso. El ambiente es relajado y el personal es muy amable. ¡Perfecto para una comida casual entre amigos!"
@@ -45,5 +46,6 @@ import SectionTitle from "../components/SectionTitle.astro";
   />
 
   <SectionTitle titleText="Ubícanos" />
+
   <Mapa />
 </section>
