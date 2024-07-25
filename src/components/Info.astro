@@ -1,0 +1,25 @@
+---
+interface Props {
+  title: string;
+  text: string;
+  img: string;
+  imgDescription: string;
+  direction: string;
+}
+
+const { title, text, img, imgDescription, direction } = Astro.props;
+---
+
+<article class=`flex ${direction} px-8 gap-16 justify-center items-center m-16`>
+  <div class="">
+    <h3 class="text-white text-2xl w-[500px] font-bold text-center mb-4">
+      {title}
+    </h3>
+    <p class="text-white text-justify w-[500px] h-full leading-8">{text}</p>
+  </div>
+  <img
+    class="w-[400px]"
+    src=`/nosotros-images/${img}.jpg`
+    alt={imgDescription}
+  />
+</article>

@@ -1,29 +1,29 @@
 ---
-import Popular from "./Popular.astro";
+import PopularCard from "./PopularCard.astro";
 ---
 
 <section class="m-8">
-  <h1 class="uppercase font-bold text-4xl text-center text-white m-8">
+  <h1 class="uppercase font-bold text-4xl text-center text-white my-8">
     <span class="text-4xl">★</span>
     Nuestros platos más populares
     <span class="text-4xl">★</span>
   </h1>
   <main class="flex flex-row justify-around">
-    <Popular
+    <PopularCard
       dishImg="pollo-a-la-brasa"
       dishTitle="Pollo a la Brasa"
       dishImgDescription="Imagen referencial de un pollo a la brasa."
       dishPrice="19.99"
     />
 
-    <Popular
+    <PopularCard
       dishImg="trio-marino"
       dishTitle="Trío Marino"
       dishImgDescription="Imagen referencial de un trío marino."
       dishPrice="24.99"
     />
 
-    <Popular
+    <PopularCard
       dishImg="leche-de-tigre"
       dishTitle="Leche de Tigre"
       dishImgDescription="Imagen referencial de una Leche de Tigre."

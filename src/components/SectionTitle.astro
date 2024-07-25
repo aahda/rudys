@@ -1,10 +1,13 @@
 ---
+interface Props {
+  titleText: string;
+}
 
+const { titleText } = Astro.props;
 ---
 
-<section>
-  <h1>{}</h1>
-  <p>
-    <a href="#">Inicio</a> -> <a href="#">Nosotros</a>
-  </p>
+<section class="my-8">
+  <h1 class="uppercase text-white text-4xl font-bold text-center my-8">
+    {titleText}
+  </h1>
 </section>

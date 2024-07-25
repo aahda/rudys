@@ -1,7 +1,49 @@
 ---
+import ComentarioCard from "../components/ComentarioCard.astro";
+import Info from "../components/Info.astro";
+import Mapa from "../components/Mapa.astro";
 import SectionTitle from "../components/SectionTitle.astro";
 ---
 
-<section class="pageSection hidden">
-  <SectionTitle />
+<section class="pageSection">
+  <SectionTitle titleText="Nosotros" />
+
+  <Info
+    title="Restaurante Rudy's"
+    text="Somos un restaurante que celebra lo mejor de la gastronomía peruana con una oferta única que combina la exquisitez de los pollos a la brasa y el frescor del ceviche peruano. Nuestro objetivo es ofrecer una experiencia culinaria inolvidable que transporte a nuestros comensales directamente al corazón de Perú."
+    img="fachada"
+    imgDescription="Fachada del restaurante Rudy's"
+    direction="flex-row"
+  />
+
+  <Info
+    title="Nuestro Fundador"
+    text="Es un placer presentarles al Fundador Fredy Taboada, un apasionado de la cocina peruana que está dando sus primeros pasos en el mundo culinario con gran entusiasmo y dedicación. Aunque recién está comenzando su carrera y su propio negocio, el Chef Fredy Taboada ya se ha ganado el cariño de sus comensales con sus deliciosos platos de pollo a la brasa y ceviche. Con un enfoque en utilizar ingredientes frescos y técnicas tradicionales, se esfuerza por ofrecer una auténtica experiencia de la gastronomía peruana."
+    img="dueño"
+    imgDescription="Dueño del restaurante Rudy's"
+    direction="flex-row-reverse"
+  />
+
+  <SectionTitle titleText="Reconocimientos" />
+
+  <Info
+    title='Participación en el concurso "El mejor ceviche - Chincha 2023"'
+    text=`Este diploma otorgado por el Gobierno Regional de Ica a través de la Dirección de Comercio Exterior, Turismo y Artesania, reconoce a Cevichería Rudy's por su participación en el concurso "El mejor ceviche - Chincha 2023". Este evento se celebró en el distrito de Tambo de Mora como parte de las actividades del "Día Nacional del Ceviche". La participación de Cevichería Rudy's 2 contribuyó positivamente al fortalecimiento del turismo gastronómico en la Provincia de Chincha. El diploma fue emitido el 28 de junio de 2023.`
+    img="reconocimiento"
+    imgDescription="Reconocimiento para el restaurante Rudy's"
+    direction="flex-row"
+  />
+
+  <SectionTitle titleText="Nuestra galería" />
+
+  <SectionTitle titleText="Comentarios" />
+  <ComentarioCard
+    userName="Angelo Torres"
+    perfil="angelo-torres"
+    comment="Este lugar es genial. El pollo a la brasa es jugoso y lleno de sabor, y el ceviche está fresco y delicioso. El ambiente es relajado y el personal es muy amable. ¡Perfecto para una comida casual entre amigos!"
+    rating="★★★★☆"
+  />
+
+  <SectionTitle titleText="Ubícanos" />
+  <Mapa />
 </section>

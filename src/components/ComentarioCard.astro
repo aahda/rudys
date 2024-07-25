@@ -1,0 +1,32 @@
+---
+interface Props {
+  userName: string;
+  perfil: string;
+  comment: string;
+  rating: string;
+}
+
+const { userName, perfil, comment, rating } = Astro.props;
+---
+
+<article
+  class="relative p-8 text-white rounded-lg bg-black/40 box-border w-[500px] m-auto"
+>
+  <header class="flex flex-row items-center gap-4">
+    <img
+      class="w-14 h-14 rounded-[50%]"
+      src=`/perfiles/${perfil}.jpg`
+      alt="Imagen del usuario"
+    />
+    <h3>{userName}</h3>
+  </header>
+  <aside class="absolute right-5 top-5">
+    <img src="/icons/comillas.png" alt="Imagen de comillas en el comentario" />
+  </aside>
+  <main class="my-4">
+    <p>{comment}</p>
+  </main>
+  <footer class="text-red-900 text-3xl">
+    {rating}
+  </footer>
+</article>
