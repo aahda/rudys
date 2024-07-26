@@ -19,6 +19,8 @@ const { dishImg, dishTitle, dishImgDescription, dishPrice } = Astro.props;
   </header>
   <main class="p-4 text-center bg-white">
     <h3 class="font-bold text-xl mb-2">{dishTitle}</h3>
-    <h4 class="text-red-900 font-bold text-2xl">S/{dishPrice}</h4>
+    <h4 class="text-red-900 font-bold text-2xl animate-agrandarPrecio">
+      S/{dishPrice}
+    </h4>
   </main>
 </article>

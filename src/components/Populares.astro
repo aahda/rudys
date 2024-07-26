@@ -3,11 +3,14 @@ import PopularCard from "./PopularCard.astro";
 ---
 
 <section class="m-8">
-  <h1 class="uppercase font-bold text-4xl text-center text-white my-8">
-    <span class="text-4xl">★</span>
-    Nuestros platos más populares
-    <span class="text-4xl">★</span>
-  </h1>
+  <header
+    class="text-white flex flex-row items-center justify-center my-8 gap-4"
+  >
+    <span class="text-5xl">★</span>
+    <h1 class="uppercase font-bold text-4xl">Nuestros platos más populares</h1>
+    <span class="text-5xl">★</span>
+  </header>
+
   <main class="flex flex-row justify-around">
     <PopularCard
       dishImg="pollo-a-la-brasa"
