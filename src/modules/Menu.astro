@@ -3,7 +3,7 @@ import MenuSection from "../components/MenuSection.astro";
 import SectionTitle from "../components/SectionTitle.astro";
 ---
 
-<section class="pageSection hidden my-8">
+<main class="pageSection hidden my-8">
   <SectionTitle titleText="Menú" />
 
   <article class="flex flex-row my-8">
@@ -45,7 +45,7 @@ import SectionTitle from "../components/SectionTitle.astro";
   <article class="pdfArticle hidden">
     <iframe src="/pdfs/menu.pdf" width="100%" height="650"></iframe>
   </article>
-</section>
+</main>
 
 <script>
   const pdfButton = document.querySelector(".pdfButton");

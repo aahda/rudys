@@ -2,67 +2,131 @@
 
 ---
 
-<!-- <article class="relative">
-  <main class="w-[1000px] h-[600px] relative m-auto">
-    <div class="absolute -left-20 scale-90 h-full overflow-hidden">
-      <img
-        class="w-full h-full"
-        src="/carrusel/pollo1.webp"
-        alt="Imagen referencial para la primera promoción de pollo."
-      />
-    </div>
-
-    <div class="absolute z-50 h-full overflow-hidden">
-      <img
-        class="w-full h-full"
-        src="/carrusel/principal.webp"
-        alt="Imagen principal del carrusel de imagenes de promociones."
-      />
-    </div>
-
-    <div class="absolute -right-20 scale-90 h-full overflow-hidden">
-      <img
-        class="w-full h-full"
-        src="/carrusel/pescado1.webp"
-        alt="Imagen referencial para la primera promoción de pescado."
-      />
-    </div>
-  </main>
-</article> -->
 <article>
-  <swiper-container class="relative w-[1000px] h-[600px]">
-    <swiper-slide>
-      <div class="h-full overflow-hidden">
+  <div
+    class="swiper w-[1000px] h-[600px] px-28 mt-16 rounded-lg overflow-hidden"
+  >
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
         <img
-          class="w-full h-full"
+          src="/carrusel/pollo3.webp"
+          alt="Imagen referencial para la tercera promoción de pollo."
+        />
+      </div>
+
+      <div class="swiper-slide">
+        <img
+          src="/carrusel/pollo2.webp"
+          alt="Imagen referencial para la segunda promoción de pollo."
+        />
+      </div>
+
+      <div class="swiper-slide">
+        <img
           src="/carrusel/pollo1.webp"
           alt="Imagen referencial para la primera promoción de pollo."
         />
       </div>
-    </swiper-slide>
 
-    <swiper-slide class="absolute -z-10">
-      <div class="h-full overflow-hidden">
+      <div class="swiper-slide">
         <img
-          class="w-full h-full"
           src="/carrusel/principal.webp"
           alt="Imagen principal del carrusel de imagenes de promociones."
         />
       </div>
-    </swiper-slide>
 
-    <swiper-slide>
-      <div class="h-full overflow-hidden">
+      <div class="swiper-slide">
         <img
-          class="w-full h-full"
           src="/carrusel/pescado1.webp"
           alt="Imagen referencial para la primera promoción de pescado."
         />
       </div>
-    </swiper-slide>
-  </swiper-container>
+
+      <div class="swiper-slide">
+        <img
+          src="/carrusel/pescado2.webp"
+          alt="Imagen referencial para la segunda promoción de pescado."
+        />
+      </div>
+
+      <div class="swiper-slide">
+        <img
+          src="/carrusel/pescado3.webp"
+          alt="Imagen referencial para la tercera promoción de pescado."
+        />
+      </div>
+    </div>
+
+    <aside class="swiper-button-next"></aside>
+    <aside class="swiper-button-prev"></aside>
+  </div>
+  <footer class="swiper-pagination"></footer>
 </article>
 
-<script
-  src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"
-></script>
+<script type="module">
+  import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
+
+  const swiper = new Swiper(".swiper", {
+    // init: false,
+
+    pagination: {
+      el: ".swiper-pagination",
+    },
+
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+
+    initialSlide: 3,
+  });
+</script>
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<style>
+  @keyframes movePrev {
+    0% {
+      transform: translateX(0px);
+    }
+    50% {
+      transform: translateX(10px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+
+  .swiper-button-prev {
+    animation: movePrev 3s infinite ease-in-out;
+  }
+
+  @keyframes moveNext {
+    0% {
+      transform: translateX(0px);
+    }
+    50% {
+      transform: translateX(-10px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+
+  .swiper-button-next {
+    animation: moveNext 3s infinite ease-in-out;
+  }
+
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    font-size: 75px;
+    font-weight: 900;
+  }
+
+  .swiper-pagination {
+    position: static;
+  }
+</style>
