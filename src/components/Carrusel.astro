@@ -2,131 +2,132 @@
 
 ---
 
-<article>
-  <div
-    class="swiper w-[1000px] h-[600px] px-28 mt-16 rounded-lg overflow-hidden"
-  >
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <img
-          src="/carrusel/pollo3.webp"
-          alt="Imagen referencial para la tercera promoción de pollo."
-        />
+<section>
+  <article>
+    <div
+      class="swiper w-[1000px] h-[600px] px-28 mt-16 rounded-lg overflow-hidden"
+    >
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img
+            src="/carrusel/pollo3.webp"
+            alt="Imagen referencial para la tercera promoción de pollo."
+          />
+        </div>
+
+        <div class="swiper-slide">
+          <img
+            src="/carrusel/pollo2.webp"
+            alt="Imagen referencial para la segunda promoción de pollo."
+          />
+        </div>
+
+        <div class="swiper-slide">
+          <img
+            src="/carrusel/pollo1.webp"
+            alt="Imagen referencial para la primera promoción de pollo."
+          />
+        </div>
+
+        <div class="swiper-slide">
+          <img
+            src="/carrusel/principal.webp"
+            alt="Imagen principal del carrusel de imagenes de promociones."
+          />
+        </div>
+
+        <div class="swiper-slide">
+          <img
+            src="/carrusel/pescado1.webp"
+            alt="Imagen referencial para la primera promoción de pescado."
+          />
+        </div>
+
+        <div class="swiper-slide">
+          <img
+            src="/carrusel/pescado2.webp"
+            alt="Imagen referencial para la segunda promoción de pescado."
+          />
+        </div>
+
+        <div class="swiper-slide">
+          <img
+            src="/carrusel/pescado3.webp"
+            alt="Imagen referencial para la tercera promoción de pescado."
+          />
+        </div>
       </div>
 
-      <div class="swiper-slide">
-        <img
-          src="/carrusel/pollo2.webp"
-          alt="Imagen referencial para la segunda promoción de pollo."
-        />
-      </div>
-
-      <div class="swiper-slide">
-        <img
-          src="/carrusel/pollo1.webp"
-          alt="Imagen referencial para la primera promoción de pollo."
-        />
-      </div>
-
-      <div class="swiper-slide">
-        <img
-          src="/carrusel/principal.webp"
-          alt="Imagen principal del carrusel de imagenes de promociones."
-        />
-      </div>
-
-      <div class="swiper-slide">
-        <img
-          src="/carrusel/pescado1.webp"
-          alt="Imagen referencial para la primera promoción de pescado."
-        />
-      </div>
-
-      <div class="swiper-slide">
-        <img
-          src="/carrusel/pescado2.webp"
-          alt="Imagen referencial para la segunda promoción de pescado."
-        />
-      </div>
-
-      <div class="swiper-slide">
-        <img
-          src="/carrusel/pescado3.webp"
-          alt="Imagen referencial para la tercera promoción de pescado."
-        />
-      </div>
+      <aside class="swiper-button-next"></aside>
+      <aside class="swiper-button-prev"></aside>
     </div>
+    <footer class="swiper-pagination"></footer>
+  </article>
+  <script type="module">
+    import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
 
-    <aside class="swiper-button-next"></aside>
-    <aside class="swiper-button-prev"></aside>
-  </div>
-  <footer class="swiper-pagination"></footer>
-</article>
+    const swiper = new Swiper(".swiper", {
+      // init: false,
 
-<script type="module">
-  import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
+      pagination: {
+        el: ".swiper-pagination",
+      },
 
-  const swiper = new Swiper(".swiper", {
-    // init: false,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
 
-    pagination: {
-      el: ".swiper-pagination",
-    },
+      initialSlide: 3,
+    });
+  </script>
 
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
 
-    initialSlide: 3,
-  });
-</script>
-
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
-
-<style>
-  @keyframes movePrev {
-    0% {
-      transform: translateX(0px);
+  <style>
+    @keyframes movePrev {
+      0% {
+        transform: translateX(0px);
+      }
+      50% {
+        transform: translateX(10px);
+      }
+      100% {
+        transform: translateX(0px);
+      }
     }
-    50% {
-      transform: translateX(10px);
-    }
-    100% {
-      transform: translateX(0px);
-    }
-  }
 
-  .swiper-button-prev {
-    animation: movePrev 3s infinite ease-in-out;
-  }
-
-  @keyframes moveNext {
-    0% {
-      transform: translateX(0px);
+    .swiper-button-prev {
+      animation: movePrev 3s infinite ease-in-out;
     }
-    50% {
-      transform: translateX(-10px);
+
+    @keyframes moveNext {
+      0% {
+        transform: translateX(0px);
+      }
+      50% {
+        transform: translateX(-10px);
+      }
+      100% {
+        transform: translateX(0px);
+      }
     }
-    100% {
-      transform: translateX(0px);
+
+    .swiper-button-next {
+      animation: moveNext 3s infinite ease-in-out;
     }
-  }
 
-  .swiper-button-next {
-    animation: moveNext 3s infinite ease-in-out;
-  }
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+      font-size: 75px;
+      font-weight: 900;
+    }
 
-  .swiper-button-next:after,
-  .swiper-button-prev:after {
-    font-size: 75px;
-    font-weight: 900;
-  }
-
-  .swiper-pagination {
-    position: static;
-  }
-</style>
+    .swiper-pagination {
+      position: static;
+    }
+  </style>
+</section>
