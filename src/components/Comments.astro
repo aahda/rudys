@@ -5,11 +5,50 @@ import SectionTitle from "./SectionTitle.astro";
 
 <section>
   <SectionTitle titleText="Comentarios" />
-  <!-- Crear componente "Comments" y hacer el funcionamiento del slider ahí -->
-  <CommentCard
-    userName="Angelo Torres"
-    perfil="angelo-torres"
-    comment="Este lugar es genial. El pollo a la brasa es jugoso y lleno de sabor, y el ceviche está fresco y delicioso. El ambiente es relajado y el personal es muy amable. ¡Perfecto para una comida casual entre amigos!"
-    rating="★★★★☆"
-  />
+
+  <main class="overflow-hidden">
+    <div class="swiper-container-comments">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <CommentCard
+            userName="Angelo Torres"
+            perfil="angelo-torres"
+            comment="Este lugar es genial. El pollo a la brasa es jugoso y lleno de sabor, y el ceviche está fresco y delicioso. El ambiente es relajado y el personal es muy amable. ¡Perfecto para una comida casual entre amigos!"
+            rating="★★★★☆"
+          />
+        </div>
+
+        <div class="swiper-slide">
+          <CommentCard
+            userName="Farid Cajo"
+            perfil="farid-cajo"
+            comment="El menú ofrece una variedad de platos exquisitos y el personal es atento y amable. El ambiente es cálido y agradable, lo que hace que la experiencia sea aún más placentera. ¡Volveré sin duda alguna!"
+            rating="★★★★★"
+          />
+        </div>
+
+        <div class="swiper-slide">
+          <CommentCard
+            userName="Ángel Huamán"
+            perfil="angel-huaman"
+            comment="La comida aquí es increíble. El servicio es rápido y eficiente, y la decoración del lugar es muy acogedora. Definitivamente volveré."
+            rating="★★★★☆"
+          />
+        </div>
+      </div>
+    </div>
+    <footer class="swiper-pagination-comments text-center"></footer>
+  </main>
+
+  <script type="module">
+    import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
+
+    const swiperComments = new Swiper(".swiper-container-comments", {
+      pagination: {
+        el: ".swiper-pagination-comments",
+      },
+
+      loop: true,
+    });
+  </script>
 </section>
