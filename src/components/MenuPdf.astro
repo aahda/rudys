@@ -1,0 +1,27 @@
+<section>
+  <article class="text-center my-8">
+    <button
+      class="pdfButton rounded-lg bg-red-900 px-4 py-2 text-white hover:scale-105 hover:bg-red-800 transition-all"
+      >VER EL MENÚ COMPLETO (.PDF)</button
+    >
+  </article>
+
+  <article class="pdfArticle hidden">
+    <iframe src="/pdfs/menu.pdf" width="100%" height="650"></iframe>
+  </article>
+</section>
+
+<script>
+  const pdfButton = document.querySelector(".pdfButton");
+  const pdfArticle = document.querySelector(".pdfArticle");
+
+  pdfButton.addEventListener("click", () => {
+    pdfArticle.classList.toggle("hidden");
+
+    const isClose = pdfArticle.classList.contains("hidden");
+
+    isClose
+      ? (pdfButton.innerHTML = "VER EL MENÚ COMPLETO (.PDF)")
+      : (pdfButton.innerHTML = "CERRAR EL MENÚ COMPLETO (.PDF)");
+  });
+</script>

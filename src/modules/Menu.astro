@@ -1,63 +1,10 @@
 ---
-import MenuSection from "../components/MenuSection.astro";
-import SectionTitle from "../components/SectionTitle.astro";
+import MenuPdf from "../components/MenuPdf.astro";
+import MenuSections from "../components/MenuSections.astro";
 ---
 
 <main class="pageSection hidden my-8">
-  <SectionTitle titleText="Menú" />
+  <MenuSections />
 
-  <article class="flex flex-row my-8">
-    <MenuSection
-      title="Entradas"
-      description="Deliciosas opciones para empezar tu experiencia culinaria con nosotros. Prueba nuestro Leche de Tigre, Causa Acevichada, Causa de Langostino, y más."
-      imgTitle="entradas"
-      imgDescription="Imagen referencial para la sección de entradas del menú."
-    />
-
-    <MenuSection
-      title="Ceviches"
-      description="Frescos y llenos de sabor, nuestros ceviches son el orgullo de nuestra cocina. Desde el clásico ceviche de pescado hasta nuestras innovadoras mezclas."
-      imgTitle="ceviches"
-      imgDescription="Imagen referencial para la sección de ceviches del menú."
-    />
-
-    <MenuSection
-      title="Platos Fuertes"
-      description="Disfruta de nuestros suculentos pollos a la brasa y una variedad de platos fuertes que satisfacerán tu apetito. Preparados con ingredientes de la más alta calidad."
-      imgTitle="platos-fuertes"
-      imgDescription="Imagen referencial para la sección de platos fuertes del menú."
-    />
-    <MenuSection
-      title="Bebidas"
-      description="Acompaña tu comida con nuestras bebidas refrescantes. Ofrecemos una selección de jugos naturales, gaseosas y bebidas alcohólicas para todos los gustos."
-      imgTitle="bebidas"
-      imgDescription="Imagen referencial para la sección de bebidas del menú."
-    />
-  </article>
-
-  <article class="text-center my-8">
-    <button
-      class="pdfButton rounded-lg bg-red-900 px-4 py-2 text-white hover:scale-105 hover:bg-red-800 transition-all"
-      >VER EL MENÚ COMPLETO (.PDF)</button
-    >
-  </article>
-
-  <article class="pdfArticle hidden">
-    <iframe src="/pdfs/menu.pdf" width="100%" height="650"></iframe>
-  </article>
+  <MenuPdf />
 </main>
-
-<script>
-  const pdfButton = document.querySelector(".pdfButton");
-  const pdfArticle = document.querySelector(".pdfArticle");
-
-  pdfButton.addEventListener("click", () => {
-    pdfArticle.classList.toggle("hidden");
-
-    const isClose = pdfArticle.classList.contains("hidden");
-
-    isClose
-      ? (pdfButton.innerHTML = "VER EL MENÚ COMPLETO (.PDF)")
-      : (pdfButton.innerHTML = "CERRAR EL MENÚ COMPLETO (.PDF)");
-  });
-</script>
