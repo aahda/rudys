@@ -59,17 +59,19 @@ import logoNegro from "/public/logos/rudys-logo-negro.svg";
 </style>
 
 <script>
-  const visitasDiarias = document.getElementById("visitasDiarias");
-
   async function getVisits() {
-    const response = await fetch("/api/vercel-analytics");
+    try {
+      const response = await fetch("/src/pages/api/vercel-analytics");
+      if (!response.ok) {
+        throw new Error("Error al obtener los datos de Vercel Analytics");
+      }
 
-    if (!response.ok) {
-      throw new Error("Error al obtener los datos de Vercel Analytics");
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      console.error("Error en getVisits:", error);
+      throw error;
     }
-
-    const data = await response.json();
-    return data;
   }
 
   async function showVisits() {
@@ -77,10 +79,12 @@ import logoNegro from "/public/logos/rudys-logo-negro.svg";
       const data = await getVisits();
       const visits = data.visits;
 
-      visitasDiarias.innerText = `Visitas diarias: ${visits}`;
+      document.getElementById("visitasDiarias").innerText =
+        `Visitas diarias: ${visits}`;
     } catch (error) {
-      console.error(error);
-      visitasDiarias.innerText = `Error al cargar visitas`;
+      console.error("Error en showVisits:", error);
+      document.getElementById("visitasDiarias").innerText =
+        "Error al cargar visitas";
     }
   }
 
