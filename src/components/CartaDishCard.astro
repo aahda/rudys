@@ -13,31 +13,35 @@ const { title, description, ingredients, price, imgTitle, imgDescription } =
 ---
 
 <article
-  class="relative flex flex-col w-[48%] text-white justify-between gap-4 mb-12"
+  class="relative flex flex-col w-[48%] text-slate-100 justify-between gap-4 mb-12"
 >
-  <main class="ml-2 mt-4 w-3/4">
-    <h3 class="font-bold mb-4 text-2xl">{title}</h3>
-    <p class="parrafo text-justify max-h-[160px] overflow-y-auto">
-      {description}
-    </p>
-  </main>
-  <button
-    class="absolute top-1/2 -translate-y-1/2 right-0 w-28 h-28 rounded-full overflow-hidden"
+  <main
+    class="flex flex-col items-center justify-between ml-2 mt-4 pb-4 border-b"
   >
-    <img
-      class="object-cover w-full h-full"
-      src=`/carta-images/${imgTitle}.webp`
-      alt={imgDescription}
-    />
-  </button>
-  <footer class="w-3/4 ml-2 flex flex-row items-center justify-between">
+    <h3 class="font-bold mb-4 text-2xl w-full">{title}</h3>
+    <div class="w-full flex flex-row justify-between">
+      <p class="parrafo text-justify w-3/5 max-h-[160px] overflow-y-auto">
+        {description}
+      </p>
+      <button
+        class="self-end mr-8 w-[155px] h-[155px] rounded-xl overflow-hidden"
+      >
+        <img
+          class="object-cover w-full h-full"
+          src=`/carta-images/${imgTitle}.webp`
+          alt={imgDescription}
+        />
+      </button>
+    </div>
+  </main>
+  <footer class="w-full ml-2 flex flex-row items-center justify-between">
     <p
-      class="border bg-red-300/10 border-red-800 px-4 py-1 rounded-xl w-fit text-white"
+      class="border bg-yellow-300 border-red-800 px-4 py-1 rounded-xl w-fit font-bold text-red-800"
     >
       S/. {price}
     </p>
     <button
-      class="bg-red-800 rounded-lg px-4 py-1 shadow-sm hover:scale-105 hover:bg-red-800 transition-transform"
+      class="bg-red-800 rounded-lg mr-8 px-4 py-1 shadow-sm hover:scale-105 hover:bg-red-800 transition-transform"
     >
       Añadir a favoritos
     </button>

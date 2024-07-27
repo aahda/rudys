@@ -9,6 +9,10 @@ import SectionTitle from "./SectionTitle.astro";
   <div class="overflow-hidden py-8">
     <article class="galeria whitespace-nowrap animate-scrollGallery">
       <GalleryImage
+        imgIndex="0"
+        imgDescription="Foto del local del restaurante Rudy's por dentro."
+      />
+      <GalleryImage
         imgIndex="1"
         imgDescription="Foto del local del restaurante Rudy's por dentro."
       />
@@ -20,10 +24,6 @@ import SectionTitle from "./SectionTitle.astro";
         imgIndex="3"
         imgDescription="Foto del local del restaurante Rudy's por dentro."
       />
-      <GalleryImage
-        imgIndex="4"
-        imgDescription="Foto del local del restaurante Rudy's por dentro."
-      />
     </article>
   </div>
 </section>
@@ -33,4 +33,9 @@ import SectionTitle from "./SectionTitle.astro";
   const clone = GALLERY.innerHTML;
 
   GALLERY.innerHTML += clone;
+
+  const imgButtons = document.querySelectorAll(".imgButton");
+
+  console.log(imgButtons);
+  imgButtons.forEach((imgButton) => {});
 </script>

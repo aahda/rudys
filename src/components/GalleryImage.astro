@@ -7,6 +7,8 @@ interface Props {
 const { imgIndex, imgDescription } = Astro.props;
 ---
 
-<button class="inline-block w-1/4 hover:scale-110 transition-transform">
-  <img src=`/galery/galeria${imgIndex}.webp` alt={imgDescription} />
+<button
+  class=`imgButton indexImg${imgIndex} inline-block w-1/4 hover:scale-110 transition-transform`
+>
+  <img src=`/gallery/galeria${imgIndex}.webp` alt={imgDescription} />
 </button>

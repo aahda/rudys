@@ -18,7 +18,7 @@ export default {
       animation: {
         agrandarPrecio: "agrandarPrecio 3s infinite ease-in-out",
 
-        scrollGallery: "scrollGallery 15s linear infinite",
+        scrollGallery: "scrollGallery 20s linear infinite",
       },
     },
   },
