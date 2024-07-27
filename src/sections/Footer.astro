@@ -61,7 +61,7 @@ import logoNegro from "/public/logos/rudys-logo-negro.svg";
 <script>
   async function getVisits() {
     try {
-      const response = await fetch("/src/pages/api/vercel-analytics");
+      const response = await fetch("/api/vercel-analytics");
       if (!response.ok) {
         throw new Error("Error al obtener los datos de Vercel Analytics");
       }
