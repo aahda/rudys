@@ -1,0 +1,51 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  ingredients: Array<string>;
+  price: string;
+  imgTitle: string;
+  imgDescription: string;
+}
+
+const { title, description, ingredients, price, imgTitle, imgDescription } =
+  Astro.props;
+---
+
+<article
+  class="relative flex flex-col w-[48%] text-white justify-between gap-4"
+>
+  <main class="ml-2 mt-4 w-3/4">
+    <h3 class="font-bold mb-4 text-2xl">{title}</h3>
+    <p class="parrafo text-justify max-h-[160px] overflow-y-auto">
+      {description}
+    </p>
+  </main>
+  <button
+    class="absolute top-1/2 -translate-y-1/2 right-0 w-28 h-28 rounded-full overflow-hidden"
+  >
+    <img
+      class="object-cover w-full h-full"
+      src=`/carta-images/${imgTitle}.webp`
+      alt={imgDescription}
+    />
+  </button>
+  <footer class="w-3/4 ml-2 flex flex-row items-center justify-between">
+    <p
+      class="border bg-red-300/10 border-red-800 px-4 py-1 rounded-xl w-fit text-white"
+    >
+      {price}
+    </p>
+    <button
+      class="bg-red-800 rounded-lg px-4 py-1 shadow-sm hover:scale-105 hover:bg-red-800 transition-transform"
+    >
+      Añadir a favoritos
+    </button>
+  </footer>
+</article>
+
+<style>
+  .parrafo::-webkit-scrollbar {
+    display: none;
+  }
+</style>

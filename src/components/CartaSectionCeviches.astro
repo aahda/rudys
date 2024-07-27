@@ -1,0 +1,27 @@
+---
+import CartaDishCard from "./CartaDishCard.astro";
+---
+
+<section class="flex flex-row flex-wrap justify-between mb-24">
+  <h2 id="ceviches" class="w-full ml-2 text-white text-4xl font-bold border-b">
+    Ceviches
+  </h2>
+
+  <CartaDishCard
+    title="Leche de Tigre"
+    description="La leche de tigre es un vibrante y refrescante jugo cítrico que se destaca en la gastronomía peruana. Es el líquido resultante de marinar pescado crudo en una mezcla de limón o lima, ají, cebolla roja, cilantro y otros condimentos, dando como resultado una combinación ácida, picante y llena de sabor."
+    ingredients={["Pescado picadito", "Limones", "Cebolla"]}
+    price="14.99"
+    imgTitle="leche-de-tigre"
+    imgDescription="Imagen referencial del platillo Leche de Tigre."
+  />
+
+  <CartaDishCard
+    title="Conchitas a la Parmesana"
+    description="Las conchitas a la parmesana son una exquisita delicia de la cocina peruana que celebra el sabor y la textura de las conchitas de mar. El resultado es un aperitivo o entrada elegante."
+    ingredients={["Pescado picadito", "Limones", "Cebolla"]}
+    price="14.99"
+    imgTitle="conchitas-a-la-parmesana"
+    imgDescription="Imagen referencial del platillo Conchitas a la Parmesana."
+  />
+</section>
