@@ -62,18 +62,7 @@ import logoNegro from "/public/logos/rudys-logo-negro.svg";
   const visitasDiarias = document.getElementById("visitasDiarias");
 
   async function getVisits() {
-    const token = "MSFALr1uYXNliu3KHS5iHRsG";
-    const projectId = "prj_sRRrcFTyVqaqcJKs05ssmiWHTRAk";
-
-    const response = await fetch(
-      `https://api.vercel.com/v1/analytics/projects/${projectId}`,
-      {
-        headers: {
-          Autorization: `Bearer ${token}`,
-          "Content-Type": "application/json",
-        },
-      }
-    );
+    const response = await fetch("/api/vercel-analytics");
 
     if (!response.ok) {
       throw new Error("Error al obtener los datos de Vercel Analytics");
