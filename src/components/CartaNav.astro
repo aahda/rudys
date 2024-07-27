@@ -2,6 +2,55 @@
 
 ---
 
-<nav class="fixed h-fit w-full text-center">
-  <a href="#bebidas">Holape</a>
+<nav
+  class="fixed top-0 h-fit w-full text-center flex flex-row justify-evenly items-center text-xl text-white bg-black/30 z-50 py-3 backdrop-blur-sm"
+>
+  <a class="linkCartaNav" href="#entradas">Entradas</a>
+  <a class="linkCartaNav" href="#ceviches">Ceviches</a>
+  <a href="/">
+    <img
+      class="w-48"
+      src="/public/logos/rudys-logo-blanco.svg"
+      alt="Logo de Rudy's"
+    />
+  </a>
+  <a class="linkCartaNav" href="#platos-fuertes">Platos Fuertes</a>
+  <a class="linkCartaNav" href="#bebidas">Bebidas</a>
 </nav>
+
+<style>
+  .linkCartaNav {
+    display: block;
+    position: relative;
+    padding: 0.2em 0;
+  }
+
+  .linkCartaNav::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
+    background-color: rgb(255, 255, 255);
+    opacity: 0;
+    transition:
+      opacity 300ms,
+      transform 300ms;
+  }
+
+  .linkCartaNav::after {
+    opacity: 1;
+    transform: scale(0);
+    transform-origin: center;
+  }
+
+  .linkCartaNav:hover::after,
+  .linkCartaNav:focus::after {
+    transform: scale(1);
+  }
+
+  .linkCartaNav:nth-child(3)::after {
+    opacity: 0;
+  }
+</style>

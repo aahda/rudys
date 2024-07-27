@@ -4,9 +4,10 @@ interface Props {
   description: string;
   imgTitle: string;
   imgDescription: string;
+  href: string;
 }
 
-const { title, description, imgTitle, imgDescription } = Astro.props;
+const { title, description, imgTitle, imgDescription, href } = Astro.props;
 ---
 
 <button class="relative w-1/4 group">
@@ -15,8 +16,9 @@ const { title, description, imgTitle, imgDescription } = Astro.props;
     src=`/menu-sections/${imgTitle}.webp`
     alt={imgDescription}
   />
-  <div
-    class="absolute top-0 text-white bg-black/50 h-full w-full overflow-hidden"
+  <a
+    href=`/carta#${href}`
+    class="absolute left-0 top-0 text-white bg-black/50 h-full w-full overflow-hidden"
   >
     <div
       class="absolute top-[35%] left-0 right-0 flex flex-col justify-center items-center group-hover:top-[20%] transition-all"
@@ -30,5 +32,5 @@ const { title, description, imgTitle, imgDescription } = Astro.props;
         {description}
       </p>
     </div>
-  </div>
+  </a>
 </button>
