@@ -1,0 +1,36 @@
+---
+import GalleryImage from "./GalleryImage.astro";
+import SectionTitle from "./SectionTitle.astro";
+---
+
+<section class="w-full">
+  <SectionTitle titleText="Nuestra galería" />
+
+  <div class="overflow-hidden py-8">
+    <article class="galeria whitespace-nowrap animate-scrollGallery">
+      <GalleryImage
+        imgIndex="1"
+        imgDescription="Foto del local del restaurante Rudy's por dentro."
+      />
+      <GalleryImage
+        imgIndex="2"
+        imgDescription="Foto del local del restaurante Rudy's por dentro."
+      />
+      <GalleryImage
+        imgIndex="3"
+        imgDescription="Foto del local del restaurante Rudy's por dentro."
+      />
+      <GalleryImage
+        imgIndex="4"
+        imgDescription="Foto del local del restaurante Rudy's por dentro."
+      />
+    </article>
+  </div>
+</section>
+
+<script>
+  const GALLERY = document.querySelector(".galeria");
+  const clone = GALLERY.innerHTML;
+
+  GALLERY.innerHTML += clone;
+</script>

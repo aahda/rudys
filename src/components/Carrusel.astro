@@ -1,5 +1,13 @@
 ---
+import Image from "astro/components/Image.astro";
 
+import pollo3 from "/public/carrusel/pollo3.webp";
+import pollo2 from "/public/carrusel/pollo2.webp";
+import pollo1 from "/public/carrusel/pollo1.webp";
+import principal from "/public/carrusel/principal.webp";
+import pescado1 from "/public/carrusel/pescado1.webp";
+import pescado2 from "/public/carrusel/pescado2.webp";
+import pescado3 from "/public/carrusel/pescado3.webp";
 ---
 
 <section>
@@ -9,50 +17,50 @@
     >
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <img
-            src="/carrusel/pollo3.webp"
+          <Image
+            src={pollo3}
             alt="Imagen referencial para la tercera promoción de pollo."
           />
         </div>
 
         <div class="swiper-slide">
-          <img
-            src="/carrusel/pollo2.webp"
+          <Image
+            src={pollo2}
             alt="Imagen referencial para la segunda promoción de pollo."
           />
         </div>
 
         <div class="swiper-slide">
-          <img
-            src="/carrusel/pollo1.webp"
+          <Image
+            src={pollo1}
             alt="Imagen referencial para la primera promoción de pollo."
           />
         </div>
 
         <div class="swiper-slide">
-          <img
-            src="/carrusel/principal.webp"
+          <Image
+            src={principal}
             alt="Imagen principal del carrusel de imagenes de promociones."
           />
         </div>
 
         <div class="swiper-slide">
-          <img
-            src="/carrusel/pescado1.webp"
+          <Image
+            src={pescado1}
             alt="Imagen referencial para la primera promoción de pescado."
           />
         </div>
 
         <div class="swiper-slide">
-          <img
-            src="/carrusel/pescado2.webp"
+          <Image
+            src={pescado2}
             alt="Imagen referencial para la segunda promoción de pescado."
           />
         </div>
 
         <div class="swiper-slide">
-          <img
-            src="/carrusel/pescado3.webp"
+          <Image
+            src={pescado3}
             alt="Imagen referencial para la tercera promoción de pescado."
           />
         </div>

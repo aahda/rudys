@@ -9,9 +9,16 @@ export default {
           "50%": { fontSize: "180%" },
           "100%": { fontSize: "150%" },
         },
+
+        scrollGallery: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
       },
       animation: {
         agrandarPrecio: "agrandarPrecio 3s infinite ease-in-out",
+
+        scrollGallery: "scrollGallery 15s linear infinite",
       },
     },
   },
