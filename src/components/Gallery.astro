@@ -25,17 +25,86 @@ import SectionTitle from "./SectionTitle.astro";
         imgDescription="Foto del local del restaurante Rudy's por dentro."
       />
     </article>
+
+    <article
+      class="modalGallery hidden fixed top-0 w-full h-screen bg-black/50 z-20"
+    >
+      <button
+        class="modalClose absolute right-0 bg-gray-800 w-10 text-white text-3xl z-30"
+      >
+        ×
+      </button>
+
+      <div class="swiper-container-gallery">
+        <div class="gallery-swiper swiper-wrapper">
+          <!-- <div class="swiper-slide">
+            <GalleryImage
+              imgIndex="0"
+              imgDescription="Foto del local del restaurante Rudy's por dentro."
+            />
+          </div>
+          <div class="swiper-slide">
+            <GalleryImage
+              imgIndex="1"
+              imgDescription="Foto del local del restaurante Rudy's por dentro."
+            />
+          </div> -->
+        </div>
+        <aside class="swiper-button-next"></aside>
+        <aside class="swiper-button-prev"></aside>
+      </div>
+    </article>
   </div>
+
+  <script type="module">
+    import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
+    const swiperComments = new Swiper(".swiper-container-gallery", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+
+      loop: true,
+    });
+
+    const GALLERY = document.querySelector(".galeria");
+    const clone = GALLERY.innerHTML;
+    GALLERY.innerHTML += clone;
+    // GALLERY.innerHTML += clone;
+
+    const modalGallery = document.querySelector(".modalGallery");
+    const modalClose = document.querySelector(".modalClose");
+    const gallerySwiper = document.querySelector(".gallery-swiper");
+
+    const imgButtons = document.querySelectorAll(".imgButton");
+
+    imgButtons.forEach((imgButton) => {
+      imgButton.addEventListener("click", () => {
+        modalGallery.style.display = "block";
+
+        document.body.classList.add("overflow-hidden");
+
+        for (let index = 0; index < imgButtons.length; index++) {
+          // se crea el slide
+          const modalGallerySlide = document.createElement("div");
+          modalGallerySlide.classList.add("swiper-slide");
+
+          // recupero la imagen del botón
+          const modalGalleryImg = imgButtons[index].innerHTML;
+          modalGallerySlide.innerHTML = modalGalleryImg;
+          modalGallerySlide.children[0].style.width = "65%";
+          modalGallerySlide.children[0].style.margin = "0 auto";
+
+          // agrego la imagen al slide
+          gallerySwiper.appendChild(modalGallerySlide);
+        }
+      });
+    });
+
+    modalClose.addEventListener("click", () => {
+      modalGallery.style.display = "none";
+
+      document.body.classList.remove("overflow-hidden");
+    });
+  </script>
 </section>
-
-<script>
-  const GALLERY = document.querySelector(".galeria");
-  const clone = GALLERY.innerHTML;
-
-  GALLERY.innerHTML += clone;
-
-  const imgButtons = document.querySelectorAll(".imgButton");
-
-  console.log(imgButtons);
-  imgButtons.forEach((imgButton) => {});
-</script>

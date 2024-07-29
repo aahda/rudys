@@ -8,7 +8,8 @@ const { imgIndex, imgDescription } = Astro.props;
 ---
 
 <button
-  class=`imgButton indexImg${imgIndex} inline-block w-1/4 hover:scale-110 transition-transform`
+  class=`imgButton inline-block w-1/4 hover:scale-110 transition-transform`
+  id={imgIndex}
 >
   <img src=`/gallery/galeria${imgIndex}.webp` alt={imgDescription} />
 </button>
