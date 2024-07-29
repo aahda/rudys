@@ -10,28 +10,62 @@
       alt="Logo de Rudy's"
     />
   </a>
-  <ul class="flex sm:hidden">
+  <ul
+    class="nav-list flex sm:hidden sm:flex-col sm:absolute sm:w-full sm:top-[79.25px] sm:left-0 sm:z-40 sm:bg-white sm:text-center"
+  >
     <li>
-      <button class="navLink text-xl px-8 text-red-900 font-semibold">
+      <button
+        class="navLink text-xl px-8 text-red-900 font-semibold sm:w-full sm:py-4"
+      >
         Inicio
       </button>
     </li>
     <li>
-      <button class="navLink text-xl px-8 text-red-900 font-semibold">
+      <button
+        class="navLink text-xl px-8 text-red-900 font-semibold sm:w-full sm:py-4"
+      >
         Menú
       </button>
     </li>
     <li>
-      <button class="navLink text-xl px-8 text-red-900 font-semibold">
+      <button
+        class="navLink text-xl px-8 text-red-900 font-semibold sm:w-full sm:py-4"
+      >
         Nosotros
       </button>
     </li>
     <li>
-      <button class="navLink text-xl px-8 text-red-900 font-semibold">
+      <button
+        class="navLink text-xl px-8 text-red-900 font-semibold sm:w-full sm:py-4"
+      >
         Eventos
       </button>
     </li>
   </ul>
 
-  <button class="hidden sm:block w-10 h-10 bg-black"></button>
+  <button class="nav-button hidden sm:block w-10 h-10">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      x="0px"
+      y="0px"
+      width="45"
+      height="45"
+      viewBox="0 0 24 24"
+      class="icon-tres fill-red-800"
+    >
+      <path
+        d="M 4.25 3 A 1.250125 1.250125 0 1 0 4.25 5.5 L 19.75 5.5 A 1.250125 1.250125 0 1 0 19.75 3 L 4.25 3 z M 4.25 11 A 1.250125 1.250125 0 1 0 4.25 13.5 L 19.75 13.5 A 1.250125 1.250125 0 1 0 19.75 11 L 4.25 11 z M 4.25 18.5 A 1.250125 1.250125 0 1 0 4.25 21 L 19.75 21 A 1.250125 1.250125 0 1 0 19.75 18.5 L 4.25 18.5 z"
+      >
+      </path>
+    </svg>
+  </button>
 </section>
+
+<script>
+  const navList = document.querySelector(".nav-list");
+  const navButton = document.querySelector(".nav-button");
+
+  navButton.addEventListener("click", () => {
+    navList.classList.toggle("sm:hidden");
+  });
+</script>
