@@ -9,8 +9,10 @@ interface Props {
 const { dishImg, dishTitle, dishImgDescription, dishPrice } = Astro.props;
 ---
 
-<article class="popular w-[300px] relative overflow-hidden rounded-lg">
-  <header class="w-full h-[200px] object-cover overflow-hidden">
+<article
+  class="popular w-[300px] relative overflow-hidden rounded-lg sm:w-[250px]"
+>
+  <header class="w-full h-[200px] object-cover overflow-hidden sm:h-[150px]">
     <img
       class="w-full h-full object-cover"
       src=`/popular/${dishImg}.webp`
