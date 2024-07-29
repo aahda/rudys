@@ -21,6 +21,10 @@ export default {
         scrollGallery: "scrollGallery 20s linear infinite",
       },
     },
+
+    screens: {
+      sm: { max: "450px" },
+    },
   },
   plugins: [],
 };
