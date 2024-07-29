@@ -18,12 +18,12 @@ const { title, description, imgTitle, imgDescription } = Astro.props;
     alt={imgDescription}
   />
   <div
-    class="absolute bottom-5 left-5 bg-white p-4 w-[400px] rounded-2xl flex flex-col gap-2 justify-center items-center"
+    class="absolute bottom-2 left-2 bg-white p-4 w-[400px] rounded-2xl flex flex-col gap-2 justify-center items-center sm:w-[110px] sm:h-[104px] sm:p-2"
   >
-    <h3 class="uppercase text-3xl font-bold">{title}</h3>
-    <p class="text-justify w-[90%]">{description}</p>
+    <h3 class="uppercase text-3xl font-bold sm:text-xs">{title}</h3>
+    <p class="text-justify w-[90%] sm:text-[6px] sm:w-full">{description}</p>
     <button
-      class="pdfButton rounded-lg shadow-sm bg-red-900 px-4 py-2 text-white hover:scale-105 hover:bg-red-800 transition-all"
+      class="pdfButton rounded-lg shadow-sm bg-red-900 px-4 py-2 text-white hover:scale-105 hover:bg-red-800 transition-all sm:text-[6px] sm:px-2 sm:py-1"
       >Más información</button
     >
   </div>
