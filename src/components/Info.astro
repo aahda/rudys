@@ -10,12 +10,20 @@ interface Props {
 const { title, text, img, imgDescription, direction } = Astro.props;
 ---
 
-<article class=`flex ${direction} px-8 gap-16 justify-center items-center m-16`>
+<article
+  class=`flex ${direction} px-8 gap-16 justify-center items-center mx-16 mb-16 sm:flex-col sm:mx-5 sm:gap-4`
+>
   <div>
-    <h3 class="text-white text-2xl w-[500px] font-bold text-center mb-4">
+    <h3
+      class="text-white text-2xl w-[500px] font-bold text-center mb-4 sm:w-full"
+    >
       {title}
     </h3>
-    <p class="text-white text-justify w-[500px] h-full leading-8">{text}</p>
+    <p
+      class="text-white text-justify w-[500px] h-full leading-8 sm:w-full sm:m-auto"
+    >
+      {text}
+    </p>
   </div>
   <img
     class="w-[400px]"
