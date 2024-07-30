@@ -23,7 +23,7 @@ export default {
     },
 
     screens: {
-      sm: { max: "450px" },
+      sm: { max: "500px" },
     },
   },
   plugins: [],
