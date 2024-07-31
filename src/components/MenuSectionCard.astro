@@ -21,13 +21,13 @@ const { title, description, imgTitle, imgDescription, href } = Astro.props;
     class="absolute left-0 top-0 text-white bg-black/50 h-full w-full overflow-hidden"
   >
     <div
-      class="absolute top-[35%] left-0 right-0 flex flex-col justify-center items-center group-hover:top-[20%] transition-all"
+      class="absolute top-[35%] left-0 right-0 flex flex-col justify-center items-center group-hover:top-[20%] transition-all duration-500"
     >
       <h3 class="uppercase text-3xl font-bold my-8">
         {title}
       </h3>
       <p
-        class="opacity-0 w-3/4 text-justify group-hover:opacity-100 transition-opacity ease-out"
+        class="opacity-0 w-3/4 text-justify group-hover:opacity-100 transition-opacity ease-out duration-[400ms]"
       >
         {description}
       </p>
