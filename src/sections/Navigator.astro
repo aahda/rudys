@@ -68,4 +68,12 @@
   navButton.addEventListener("click", () => {
     navList.classList.toggle("sm:hidden");
   });
+
+  const navLinks = document.querySelectorAll(".navLink");
+
+  navLinks.forEach((navLink) => {
+    navLink.addEventListener("click", () => {
+      navList.classList.add("sm:hidden");
+    });
+  });
 </script>
