@@ -82,36 +82,3 @@ import logoNegro from "/public/logos/rudys-logo-negro.svg";
     text-decoration: none;
   }
 </style>
-
-<!-- <script>
-  async function getVisits() {
-    try {
-      const response = await fetch("/pages/api/vercel-analytics");
-      if (!response.ok) {
-        throw new Error("Error al obtener los datos de Vercel Analytics");
-      }
-
-      const data = await response.json();
-      return data;
-    } catch (error) {
-      console.error("Error en getVisits:", error);
-      throw error;
-    }
-  }
-
-  async function showVisits() {
-    try {
-      const data = await getVisits();
-      const visits = data.visits;
-
-      document.getElementById("visitasDiarias").innerText =
-        `Visitas diarias: ${visits}`;
-    } catch (error) {
-      console.error("Error en showVisits:", error);
-      document.getElementById("visitasDiarias").innerText =
-        "Error al cargar visitas";
-    }
-  }
-
-  showVisits();
-</script> -->
