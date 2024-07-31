@@ -4,9 +4,11 @@ interface Props {
   description: string;
   imgTitle: string;
   imgDescription: string;
+  wspMessage: string;
 }
 
-const { title, description, imgTitle, imgDescription } = Astro.props;
+const { title, description, imgTitle, imgDescription, wspMessage } =
+  Astro.props;
 ---
 
 <article
@@ -22,9 +24,12 @@ const { title, description, imgTitle, imgDescription } = Astro.props;
   >
     <h3 class="uppercase text-3xl font-bold sm:text-xs">{title}</h3>
     <p class="text-justify w-[90%] sm:text-[6px] sm:w-full">{description}</p>
-    <button
+    <a
       class="pdfButton rounded-lg shadow-sm bg-red-900 px-4 py-2 text-white hover:scale-105 hover:bg-red-800 transition-all sm:text-[6px] sm:px-2 sm:py-1"
-      >Más información</button
+      href={wspMessage}
+      target="_blank"
     >
+      Más información
+    </a>
   </div>
 </article>
