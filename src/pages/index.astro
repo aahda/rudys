@@ -37,4 +37,25 @@ import Footer from "../sections/Footer.astro";
       }
     });
   });
+
+  const FOOTER_ANCHORS = Array.from(document.querySelectorAll(".footerLink"));
+
+  FOOTER_ANCHORS.forEach((anchor) => {
+    anchor.addEventListener("click", () => {
+      const index = FOOTER_ANCHORS.indexOf(anchor);
+
+      if (!PAGE_SECTIONS[index].classList.contains("activo")) {
+        PAGE_SECTIONS.forEach((section) => {
+          section.classList.remove("activo");
+          section.classList.add("hidden");
+        });
+        PAGE_SECTIONS[index].classList.add("activo");
+        PAGE_SECTIONS[index].classList.remove("hidden");
+      }
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
+  });
 </script>
