@@ -9,4 +9,4 @@ npm run dev
 ```
 5. Después de haber insertado el comando, se le mostrará un link del localhost junto al puerto donde podrá ver la página
 > Ejemplo de como se vería el link del localhost:
-   ![image](https://github.com/user-attachments/assets/97be192f-9343-4bff-aa9d-64a411b75009)
+![image](https://github.com/user-attachments/assets/97be192f-9343-4bff-aa9d-64a411b75009)
