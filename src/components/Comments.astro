@@ -3,7 +3,7 @@ import CommentCard from "./CommentCard.astro";
 import SectionTitle from "./SectionTitle.astro";
 ---
 
-<section>
+<section class="comments">
   <SectionTitle titleText="Comentarios" />
 
   <main class="overflow-hidden">
@@ -50,5 +50,27 @@ import SectionTitle from "./SectionTitle.astro";
 
       loop: true,
     });
+  </script>
+  <script>
+    const addComment = document.querySelector(".addComment");
+    const sectionComments = document.querySelector(".comments");
+
+    const intersectionOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          addComment.classList.remove("translate-x-full");
+        } else {
+          addComment.classList.add("translate-x-full");
+        }
+      });
+    }, intersectionOptions);
+
+    observer.observe(sectionComments);
   </script>
 </section>
